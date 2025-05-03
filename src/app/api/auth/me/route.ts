@@ -14,11 +14,12 @@ export async function GET(request:NextRequest){
             success:true,
             user
         })
-        
-    } catch (error:any) {
+    } catch (error: unknown) {
+        const err = error instanceof Error ? error.message : String(error)
         return NextResponse.json({
             message:"error to fetch user details",
             success:false,
+            error: err
         })
     }
 }

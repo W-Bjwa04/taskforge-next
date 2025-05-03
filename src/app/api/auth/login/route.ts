@@ -60,9 +60,9 @@ export async function POST(request:NextRequest){
 
         return response 
 
-    } catch (error:any) {
+    } catch (error:unknown) {
         return NextResponse.json({
-            error:error.message
+            error:"Someting went wrong"
         },{
             status:500
         })

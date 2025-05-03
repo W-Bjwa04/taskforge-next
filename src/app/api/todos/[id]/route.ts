@@ -66,9 +66,9 @@ export async function PUT(request: NextRequest) {
             success: true,
         }, { status: 201 })
 
-    } catch (error: any) {
+    } catch (error: unknown) {
         return NextResponse.json(
-            { error: error.message || "Failed to update todo" },
+            { error: "Failed to update todo" },
             { status: 500 }
         )
     }
@@ -115,10 +115,10 @@ export async function DELETE(request:NextRequest){
             success: true,
         }, { status: 201 })
 
-    } catch (error:any) {
+    } catch (error:unknown) {
         return NextResponse.json(
             {
-                error: error.message || "Failed to delete todo"
+                error: "Failed to delete todo"
             },
             {
                 status: 500

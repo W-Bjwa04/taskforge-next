@@ -1,7 +1,7 @@
-import { NextRequest,NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 
 
-export  async function GET(request:NextRequest){
+export  async function GET(){
 
     try {
         const response = NextResponse.json(
@@ -20,11 +20,11 @@ export  async function GET(request:NextRequest){
 
             return response
         
-    } catch (error:any) {
+    } catch (error:unknown) {
         return NextResponse.json({
-            "message":error,
+            "message":"an error occured",
             success:false
-        },{status:400})
+        },{status:500})
     }
 
 }

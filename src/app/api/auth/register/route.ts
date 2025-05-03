@@ -43,8 +43,11 @@ export async function POST(request:NextRequest){
         })
 
 
-    } catch (error:any) {
-        return NextResponse.json({error:"Signup Failed"}, {status: 500})
+    } catch (error: unknown) {
+        return NextResponse.json({
+            error:"Signup Failed",
+            details: error instanceof Error ? error.message : String(error),
+        }, {status: 500})
     }
 }
 

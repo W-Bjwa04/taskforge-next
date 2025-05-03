@@ -1,0 +1,19 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/login/route": "app/api/auth/login/route.js",
+  "/api/auth/logout/route": "app/api/auth/logout/route.js",
+  "/api/auth/me/route": "app/api/auth/me/route.js",
+  "/api/auth/register/route": "app/api/auth/register/route.js",
+  "/api/auth/verify/route": "app/api/auth/verify/route.js",
+  "/api/todos/[id]/route": "app/api/todos/[id]/route.js",
+  "/api/todos/route": "app/api/todos/route.js",
+  "/completed/page": "app/completed/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/login/page": "app/login/page.js",
+  "/notify-verification/page": "app/notify-verification/page.js",
+  "/page": "app/page.js",
+  "/register/page": "app/register/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/verify-email/page": "app/verify-email/page.js"
+}
